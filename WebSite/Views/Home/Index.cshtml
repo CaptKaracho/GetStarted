@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h1>@ViewBag.Information</h1>
+
+<ul style="list-style:none;margin:0px;padding:0px">
+    <li>Link1</li>
+    <li>
+        @*@Html.Action("Info","About","Home");*@
+        @Html.ActionLink("info","About","Home")
+    </li>
+</ul>
+
+<ul>
+    @{for (var _i = 0; _i < 10; _i++)
+        {
+            string _Text = ViewBag.Title + _i;
+            <li>@_Text</li>
+        }
+    }
+</ul>
+

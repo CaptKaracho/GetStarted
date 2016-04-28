@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            top: 0px;
+            background-color: #b5b5b5;
+            font-family: Calibri;
+        }
+
+        #page {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        header {
+            height: 50px;
+            background-color: #f3f3f3;
+            position: relative;
+            padding: 10px;
+        }
+
+            header .intro {
+                position: absolute;
+                display:inline-block;
+                left:10px;
+            }
+
+            header .login {
+                position: absolute;
+                display:inline-block;
+                right:10px;
+            }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <header>
+            <div class="intro">
+                <span>@Html.ActionLink("Überschrifft für GetStarted","Index","Home")</span>
+            </div>
+            <div class="login">
+@Html.Partial("_LoginPartial")
+            </div>
+        </header>
+        <content>
+            @RenderBody()
+        </content>
+    </div>
+</body>
+</html>
